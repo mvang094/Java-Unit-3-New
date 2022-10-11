@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--The xmlns attribute specifies the xml namespace for a document
+An XML namespace is a collection of names that can be used as element or attribute names in an XML document
+So here, the collection of names that can be used is from the thymeleaf.org website-->
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>The Best Movie Title</title>
+    <meta http-equiv = "Content-type" content = "text/html; charset=UTF-8"/>
+</head>
+<body>
+    <a href ="/">Home</a>
+    <p>I Love Movies!</p>
+
+<!--    Attribute responsible for displaying the text that is evaluated from the-->
+<!--    expression inside it. Here BestMovie should return the best movie in MovieController-->
+    <p th:text ="'The best movie is: ' + ${BestMovie}"/>
+    <p th:text = "'Voters: ' + ${bestMovieVoters}"/>
+
+</body>
+</html>
